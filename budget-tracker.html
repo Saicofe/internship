@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; color: #333; }
+        header{ background-color: #007bff; color: white; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        section { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th { 
+            background-color: #007bff; 
+            color: white;
+         }
+      
+        form {
+             max-width: 400px; 
+             margin: auto;
+             display: flex; 
+             flex-direction: column;
+             }
+        label, input, select, button {
+             margin-bottom: 10px;
+              padding: 8px;
+               font-size: 16px;
+             }
+        button { 
+            background-color: #28a745; 
+            color: white; border: none;
+         }
+        
+        .edit-btn { 
+            background-color: green ;
+            color: white; 
+            border: none; 
+            padding: 8px; 
+        }
+      
+        .delete-btn { 
+            background-color: #dc3545; 
+            color: white; border: none;
+            padding: 8px; 
+        }
+        footer{
+            color:red; 
+            padding: 15px; 
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#add">Add Expense</a> |
+            <a href="#summary">View Budget</a>
+        </nav>
+    </header>
+    
+    <section id="add">
+        <h2>Add Income/Expense</h2>
+        <form>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            
+            <label for="type">Type:</label>
+            <select id="type" name="type" required>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+            
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <button type="submit">Add Entry</button>
+        </form>
+    </section>
+    
+    <section id="summary">
+        <h2>Budget Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Food</td>
+                    <td>200</td>
+                    <td>2025-02-01</td>
+                    <td>Expense</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transportation</td>
+                    <td>150</td>
+                    <td>2025-02-02</td>
+                    <td>Expense</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>30000</td>
+                    <td>2025-02-01</td>
+                    <td>Income</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>1000</td>
+                    <td>2025-02-03</td>
+                    <td>Expense</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Others</td>
+                    <td>5000</td>
+                    <td>2025-02-04</td>
+                    <td>Expense</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <footer>
+        <p>Personal Budget Tracker &copy; 2025 | Version 1.0</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+    </footer>
+</body>
+</html>
